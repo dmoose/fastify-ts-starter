@@ -1,5 +1,7 @@
 # [fastify](https://www.fastify.io/) with typescript
 
+![Node.js CI](https://github.com/dmoose/fastify-ts-starter/workflows/Node.js%20CI/badge.svg)
+
 ## Integrations covered here:
 
 - local development setup
