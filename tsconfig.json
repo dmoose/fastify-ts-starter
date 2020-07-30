@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["es2018"],
+    "paths": {
+      "*": ["src/*"]
+    },
+    "allowJs": false,
+    "strict": true,
+    "target": "es2018",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "typeRoots": ["./node_modules/@types", "./typings"],
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*.ts", "typings/index.d.ts"],
+  "exclude": ["node_modules", "tests/**/*.ts", "**/*.test.ts"]
+}

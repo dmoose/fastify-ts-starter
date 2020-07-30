@@ -1,0 +1,7 @@
+# ignore artifacts
+node_modules
+dist
+coverage
+
+# sql files
+# *.sql

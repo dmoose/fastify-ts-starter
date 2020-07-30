@@ -1,0 +1,64 @@
+{
+  "name": "fastify-ts-starter",
+  "version": "1.0.0",
+  "description": "fastify node.js typescript starter app",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test jest",
+    "test:gh-actions": "JEST_WORKERS=$(nproc --all) jest --coverage --maxWorkers=$(nproc --all)",
+    "start": "npm run serve",
+    "build": "rm -rf dist; tsc; npm run copyfiles",
+    "build:watch": "tsc -w",
+    "serve": "node dist/",
+    "copyfiles": "copyfiles -u 1 src/**/*.json src/**/*.sql dist",
+    "lint": "eslint --fix --ext .ts ./",
+    "prettier": "prettier --write '**/*.{js,json,md,ts,yaml,yml}' '.editorconfig' 'LICENSE'",
+    "dev": "ts-node-dev --respawn --files ./src/index.ts",
+    "debug": "ts-node --files ./src/index.ts",
+    "compile-schemas": "json2ts -i schemas -o typings"
+  },
+  "keywords": [],
+  "author": "Jeff Shumate",
+  "license": "ISC",
+  "dependencies": {
+    "@types/convict": "^5.2.1",
+    "chalk": "^4.1.0",
+    "convict": "^6.0.0",
+    "convict-format-with-validator": "^6.0.0",
+    "fastify": "^3.1.1",
+    "fastify-blipp": "^3.0.0",
+    "fastify-cors": "^4.1.0",
+    "fastify-plugin": "^2.0.3",
+    "fastify-sensible": "^3.0.1",
+    "fastify-swagger": "^3.1.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.7",
+    "@types/node": "^14.0.27",
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "copyfiles": "^2.3.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-formatter-pretty": "^4.0.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^23.19.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.5",
+    "jest": "^26.1.0",
+    "json-schema-to-typescript": "^9.1.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.1.4",
+    "ts-node": "^8.10.2",
+    "ts-node-dev": "^1.0.0-pre.56",
+    "typescript": "^3.9.7"
+  },
+  "majestic": {
+    "env": {
+      "NODE_PATH": "./src"
+    }
+  }
+}
